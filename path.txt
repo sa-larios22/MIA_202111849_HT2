@@ -1,1 +1,1 @@
-exec -path=/home/sergio/GolandProjects/MIA_202111849_HT2/prueba.adjs
+execute -path=/home/sergio/GolandProjects/MIA_202111849_HT2/prueba.adjs

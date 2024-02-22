@@ -126,16 +126,25 @@ func SepararTokens(texto string) []string {
 }
 
 func funciones(token string, tks []string) {
+
+	fmt.Println("\t")
+	fmt.Println("===== FUNC FUNCIONES =====")
+	fmt.Println("STRING TOKEN: ")
+	fmt.Println(token)
+	fmt.Println("STRING TKS: ")
+	fmt.Println(tks)
+	fmt.Println("\t")
+
 	if token != "" {
-		if Comandos.Comparar(token, "EXEC") {
+		if Comandos.Comparar(token, "EXECUTE") {
 			fmt.Println("======================== FUNCIÓN EXECUTE ========================")
 			FuncionExec(tks)
 		} else if Comandos.Comparar(token, "MKDISK") {
 			fmt.Println("======================== FUNCIÓN MKDISK ========================")
 			Comandos.ValidarDatosMKDISK(tks)
-		} else if Comandos.Comparar(token, "RMDISK") {
-			fmt.Println("======================== FUNCIÓN RMDISK ========================")
-			Comandos.RMDISK(tks)
+		} else if Comandos.Comparar(token, "FMDISK") {
+			fmt.Println("======================== FUNCIÓN FDISK ========================")
+			Comandos.ValidarDatosFDISK(tks)
 		} else {
 			Comandos.Error("ANALIZADOR", "No se reconoce el comando \""+token+"\"")
 		}
@@ -143,6 +152,7 @@ func funciones(token string, tks []string) {
 }
 
 func FuncionExec(tokens []string) {
+
 	path := ""
 	for i := 0; i < len(tokens); i++ {
 		datos := strings.Split(tokens[i], "=")

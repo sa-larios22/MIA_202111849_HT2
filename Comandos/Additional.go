@@ -19,11 +19,11 @@ func Comparar(a string, b string) bool {
 }
 
 func Error(op string, mensaje string) {
-	fmt.Println("\tERROR: " + op + "\n\tTIPO: " + mensaje)
+	fmt.Println("\tERROR: " + op + "\n\tTIPO: " + mensaje + "\n")
 }
 
 func Mensaje(op string, mensaje string) {
-	fmt.Println("\tCOMANDO: " + op + "\n\tTIPO: " + mensaje)
+	fmt.Println("\tCOMANDO: " + op + "\n\tTIPO: " + mensaje + "\n")
 }
 
 func Confirmar(mensaje string) bool {

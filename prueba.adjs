@@ -1,12 +1,8 @@
-#Calificacion
-# --- PARTE 1 ---
-#CREACION DE DISCOS
-mkdisk -size=112 -unit=M -path=/home/daniel/Escritorio/disco.dk
-mkdisk -size=1 -path="/home/daniel/Escritorio/eliminar.dk"
+# Archivo de Prueba
+# Hoja de Trabajo 2
 
-pause
+# CREACIÓN DE DISCOS
+mkdisk -size=5 -unit=M
 
-#Eliminacion de discos
-rmdisk -path="/home/daniel/Escritorio/eliminar.dk"
-
-pause
+# MODIFICACIÓN DE DISCOS
+fdisk -type=E - driveletter=A.dsk -unit=M -name=Particion1 -size=1
