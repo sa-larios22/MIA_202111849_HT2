@@ -6,3 +6,10 @@ mkdisk -size=5 -unit=M
 
 # MODIFICACIÓN DE DISCOS
 fdisk -type=E - driveletter=A.dsk -unit=M -name=Particion1 -size=1
+fdisk -type=E - driveletter=A.dsk -unit=M -name=Particion1 -size=1
+fdisk - driveletter=A.dsk -type=P -unit=M -name=Particion2 -size=1
+fdisk - driveletter=A.dsk -unit=M -type=P -name=Particion3 -size=1
+fdisk -type=P - driveletter=A.dsk -unit=M -size=1 -name=Particion4
+
+# GENERACIÓN DE REPORTES
+rep

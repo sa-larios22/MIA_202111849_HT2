@@ -132,7 +132,7 @@ func funciones(token string, tks []string) {
 	fmt.Println("STRING TOKEN: ")
 	fmt.Println(token)
 	fmt.Println("STRING TKS: ")
-	fmt.Println(tks)
+	fmt.Println(strings.Join(tks, ", "))
 	fmt.Println("\t")
 
 	if token != "" {
@@ -142,9 +142,11 @@ func funciones(token string, tks []string) {
 		} else if Comandos.Comparar(token, "MKDISK") {
 			fmt.Println("======================== FUNCIÓN MKDISK ========================")
 			Comandos.ValidarDatosMKDISK(tks)
-		} else if Comandos.Comparar(token, "FMDISK") {
+		} else if Comandos.Comparar(token, "FDISK") {
 			fmt.Println("======================== FUNCIÓN FDISK ========================")
 			Comandos.ValidarDatosFDISK(tks)
+		} else if Comandos.Comparar(token, "REP") {
+			fmt.Println("======================== FUNCIÓN REP ========================")
 		} else {
 			Comandos.Error("ANALIZADOR", "No se reconoce el comando \""+token+"\"")
 		}
